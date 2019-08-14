@@ -12,7 +12,7 @@ class TaskSchema extends Schema {
         .unsigned()
         .notNullable()
         .references("id")
-        .inTable("users")
+        .inTable("projects")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
       table
@@ -26,7 +26,7 @@ class TaskSchema extends Schema {
         .integer("file_id")
         .unsigned()
         .references("id")
-        .inTable("users")
+        .inTable("files")
         .onUpdate("CASCADE")
         .onDelete("SET NULL");
       table.string("title").notNullable();
